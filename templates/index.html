@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Quality Prediction</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"> AQIAI</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#prediction">Predict AQI</a></li>
+      <li><a href="#dataset">Datasets</a></li>
+      <li><a href="#accuracy">Accuracy</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="section hero">
+    <h1 style="margin-top: 35px;">Air Quality Index Prediction</h1>
+    <h4 style="margin-bottom: 40px;">AI-powered system to predict AQI using pollution, mobility, and weather data.</h4>
+  </section>
+
+  <!-- AQI PREDICTION -->
+  <section id="prediction" class="section card">
+    <h2>Predict AQI</h2>
+
+    <form id="aqiForm">
+
+      <div class="form-grid">
+
+        <div class="form-field">
+          <label>Date & Time</label>
+          <input type="datetime-local" id="date" required>
+        </div>
+
+        <div class="form-field">
+          <label>City</label>
+          <input type="text" id="city" required>
+        </div>
+
+        <div class="form-field">
+          <label>PM2.5</label>
+          <input type="number" step="0.01" id="pm25" required>
+        </div>
+
+        <div class="form-field">
+          <label>PM10</label>
+          <input type="number" step="0.01" id="pm10" required>
+        </div>
+
+        <div class="form-field">
+          <label>NO2</label>
+          <input type="number" step="0.01" id="no2" required>
+        </div>
+
+        <div class="form-field">
+          <label>CO</label>
+          <input type="number" step="0.01" id="co" required>
+        </div>
+
+        <div class="form-field">
+          <label>Temperature</label>
+          <input type="number" step="0.01" id="temp" required>
+        </div>
+
+        <div class="form-field">
+          <label>Humidity</label>
+          <input type="number" step="0.01" id="humidity" required>
+        </div>
+
+        <div class="form-field">
+          <label>Retail Mobility</label>
+          <input type="number" step="0.01" id="retail_mobility" required>
+        </div>
+
+        <div class="form-field">
+          <label>Workplace Mobility</label>
+          <input type="number" step="0.01" id="workplace_mobility" required>
+        </div>
+
+        <div class="form-field">
+          <label>Transit Mobility</label>
+          <input type="number" step="0.01" id="transit_mobility" required>
+        </div>
+
+      </div>
+
+      <button type="submit">Predict AQI</button>
+      <p id="aqiOutput" class="output"></p>
+
+    </form>
+  </section>
+
+
+  
+  <!-- DATASET -->
+  <section id="dataset" class="section card">
+    <h2>Datasets Used</h2>
+    <ul class="list">
+      <a href="https://www.kaggle.com/datasets/karimipavan/air-quality-prediction/" style="text-decoration: none; color: blue;">https://www.kaggle.com/datasets/karimipavan/air-quality-prediction/</a>
+    </ul>
+  </section>
+
+  <!-- ACCURACY -->
+  <section id="accuracy" class="section card">
+    <h2>Model Accuracy</h2>
+    <ul class="list">
+      <li>AQI Prediction Model: <b>87%</b></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2026 AQI Project | ML</p>
+  </footer>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>
